@@ -1,0 +1,31 @@
+import os
+import sys
+msg="""
+\033[42;1mWelcome using Lin's auditing system!\033[0m
+"""
+
+print msg
+
+host_dic={
+    'tom':'192.168.60.128',
+    'jack':'192.168.60.129'
+}
+
+while True:
+    for num,key in enumerate(host_dic):
+        print num,':',host_dic[key]
+    print 'Q/q for quit-->'
+    try:
+        host=raw_input('please choice:')
+    except Exceptions ,e:
+        print '\033[31;1myour enter is not right!\033[0m'
+    if host.strip().lower()=='q':
+        break
+    elif host.strip()=='0':
+        print '\033[32;1mGoing to connect \033[0m',host_dic['tom']
+        os.system("python /home/author_agent/paramiko-1.10.1/demos/demo.py %s"%host_dic['tom'])
+    elif host.strip()=='1':
+        print '\033[32;1mGoing to connect \033[0m',host_dic['jack']
+        os.system("python /home/author_agent/paramiko-1.10.1/demos/demo.py %s"%host_dic['jack'])
+    else:
+        print '\033[31;1myour enter is not right!\033[0m'

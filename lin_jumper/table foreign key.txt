@@ -1,0 +1,2 @@
+ALTER TABLE action_list ADD CONSTRAINT fk_users_id FOREIGN KEY(user_id) REFERENCES users(id); 
+ALTER TABLE action_list ADD CONSTRAINT fk_server_id FOREIGN KEY(server_id) REFERENCES servers(id);
