@@ -8,3 +8,5 @@ lin_jumper                    个人独自写的堡垒机，与jumpserver用的�
 
 multi_remote                  多主机批量执行命令和上传
 
+robot_chat                    自主开发类似微信机器人小冰，自动聊天回复。
+
